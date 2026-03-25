@@ -465,11 +465,11 @@ S3 버킷: [mwaa-cmdb-bucket]
 
 | 항목 | 예시 |
 |---|---|
-| AWS 계정 ID | `703172063505` → `703*********` |
-| ARN 계정 부분 | `arn:aws:iam::703172063505:role/...` → `arn:aws:iam::703*********:role/...` |
-| Access Key | `AKIAIOSFODNN7EXAMPLE` → `AKIAIOSF************` |
-| IP 주소 | `10.0.1.100` → `10.0.*.**` |
-| 이메일 | `user@company.com` → `***@***.***` |
+| AWS 계정 ID | `123*********` |
+| ARN 계정 부분 | `arn:aws:iam::123*********:role/...` |
+| Access Key | `ABCDEFG*************` |
+| IP 주소 | `10.0.*.**` |
+| 이메일 | `***@***.***` |
 
 **보존 항목:** 역할명, 정책명, 서비스명 (분석에 필요)
 
@@ -483,14 +483,7 @@ cmdb_mcp/
 ├── mcp_server.py           # 내부 CMDB MCP 서버 (S3 조회)
 ├── mcp_config.json         # MCP 서버 설정 (Claude Desktop 연동용)
 ├── requirements.txt        # Python 패키지
-├── .env                    # 환경 변수 (Git 제외)
-├── .env.example            # 환경 변수 예시
-├── .gitignore              # Git 제외 파일
 ├── run.sh                  # 통합 실행 스크립트
-├── setup_env.sh            # 가상환경 설정 스크립트
-├── upload_sample_data.py   # S3 샘플 데이터 업로드
-├── test_billing_query.py   # Billing MCP 테스트
-└── cmdbmcp313_new/         # Python 3.13 가상환경 (Git 제외)
 ```
 
 ---
