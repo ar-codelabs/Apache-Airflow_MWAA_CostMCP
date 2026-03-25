@@ -1,0 +1,83 @@
+{
+  "mcpServers": {
+    "cmdb-server": {
+      "command": "python",
+      "args": ["mcp_server.py"],
+      "env": {
+        "AWS_DEFAULT_REGION": "us-east-1"
+      },
+      "skill": "cmdb",
+      "label": "📊 CMDB (S3)",
+      "internal": true
+    },
+    "billing": {
+      "command": "uvx",
+      "args": ["awslabs.billing-cost-management-mcp-server@latest"],
+      "env": {
+        "AWS_REGION": "us-east-1",
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "skill": "cost",
+      "label": "💰 AWS Billing"
+    },
+    "cost_explorer": {
+      "command": "uvx",
+      "args": ["awslabs.cost-explorer-mcp-server@latest"],
+      "env": {
+        "AWS_REGION": "us-east-1",
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "skill": "cost",
+      "label": "📈 AWS Cost Explorer"
+    },
+    "knowledge": {
+      "command": "uvx",
+      "args": ["awslabs.aws-documentation-mcp-server@latest"],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "skill": "knowledge",
+      "label": "📚 AWS Knowledge"
+    },
+    "pricing": {
+      "command": "uvx",
+      "args": ["awslabs.aws-pricing-mcp-server@latest"],
+      "env": {
+        "AWS_REGION": "us-east-1",
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "skill": "cost",
+      "label": "💵 AWS Pricing"
+    },
+    "cloudwatch": {
+      "command": "uvx",
+      "args": ["awslabs.cloudwatch-mcp-server@latest"],
+      "env": {
+        "AWS_REGION": "us-east-1",
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "skill": "monitoring",
+      "label": "📊 CloudWatch"
+    },
+    "cloudtrail": {
+      "command": "uvx",
+      "args": ["awslabs.cloudtrail-mcp-server@latest"],
+      "env": {
+        "AWS_REGION": "us-east-1",
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "skill": "audit",
+      "label": "🔍 CloudTrail"
+    },
+    "iam": {
+      "command": "uvx",
+      "args": ["awslabs.iam-mcp-server@latest"],
+      "env": {
+        "AWS_REGION": "us-east-1",
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "skill": "security",
+      "label": "🔐 IAM"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+streamlit
+boto3
+pandas
+plotly
+mcp
+python-dotenv
+psutil
+nest-asyncio
+strands-agents
+strands-agents-tools
