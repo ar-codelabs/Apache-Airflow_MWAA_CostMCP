@@ -227,7 +227,7 @@ BEDROCK_MODEL_ID=us.anthropic.claude-sonnet-4-20250514-v1:0
 ./run.sh
 
 # 또는 직접 실행
-cmdbmcp313_new/bin/python -m streamlit run streamlit_app.py --server.port 8505
+python -m streamlit run streamlit_app.py --server.port 8505
 ```
 
 **접속 URL:** http://localhost:8505
